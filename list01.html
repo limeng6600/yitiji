@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一体机</title>
+<link href="css/hd-all-in-one.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/list01.js"></script>
+<script src="js/util.js"></script>
+
+</head>
+
+<body>
+<!--头部-->
+<div class="hd-all-in-one-top">
+ <div class="hd-system-settings">
+  <a href="#" class="hd-system-settings-img"></a>
+  <p><a href="#">系统设置</a></p>
+ </div>
+ <div class="hd-time">
+  <a href="#" class="hd-time-img"></a>
+  <p><a href="#">2018-08-08</a></p>
+ </div>
+</div>
+<!--主干-->
+<div class="hd-all-in-one-body01">
+<!--左侧菜单--> 
+ <div class="hd-left-nav">
+  <div class="hd-all-in-one-body01-home">
+   <a href="./index.html" class="hd-all-in-one-body01-home-img">返回首页</a>
+  </div>
+  <div id="daohang">
+   <!-- <a href="#" class="hd-link">工作督办</a>
+   <a href="#" class="hd-link">日常工作</a>
+   <a href="#" class="hd-link">星级评比</a>
+   <a href="#" class="hd-link">值班</a>
+   <a href="#" class="hd-link">电子交班</a>
+   <a href="#" class="hd-link">统计报表</a> -->
+   <a href="#" class="hd-link">通知（技）</a>
+   <a href="#" class="hd-link">通知（安）</a>
+   <a href="#" class="hd-link">通知（综）</a>  
+   <a href="#" class="hd-link">通知（教）</a>
+   <a href="#" class="hd-link">党群</a>
+   <!-- <a href="#" class="hd-link">生产任务</a>
+   <a href="#" class="hd-link">模拟考试</a>  
+   <a href="#" class="hd-link">工作量查询</a>                     -->
+  </div>
+ </div>
+<!--右侧内容-->  
+ <div class="hd-all-in-one-body01-ight-list">
+  <div class="hd-all-in-one-body01-ight-list-title" id="topic_name">专题文件列表</div>
+  <div class="hd-all-in-one-body01-ight-list-search">
+   <!-- <a href="#" class="hd-all-in-one-body01-search-but02">上传文件</a> -->
+   <a href="#" class="hd-all-in-one-body-search-but01" onclick="serach()">查询文件</a> 
+   <input type="text"  class="hd-all-in-one-body-search-iput" value="录入关键字" id="serach"/>
+  </div>
+  <div class="hd-all-in-one-body01-ight-list-table">
+   <div class="hd-table-list-title">
+    <div class="hd-table-name-title">文件名称</div>
+    <div class="hd-table-time-title">上传时间</div>
+    <div class="hd-table-type-title">创建人</div>
+   </div>  
+   
+   <div id="rows">
+        <div class="hd-table-list01">
+            <div class="hd-table-name">><a href="#">检修车间交班会8.2（调度组）.pptx</a></div>
+            <div class="hd-table-time">2018-08-17</div>
+            <div class="hd-table-type">督办上传</div>
+        </div> 
+    </div>  
+    
+  </div>
+ </div>
+</div>
+</body>
+</html>
