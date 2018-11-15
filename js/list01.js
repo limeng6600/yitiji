@@ -32,7 +32,6 @@ function findFileOnlineByTopicId(topic_id){
             var html = '';
             $.each(result.rows, function(i, val){
                 html += '<div class="hd-table-list01">';
-                console.log(val.id)
                 html += '<div class="hd-table-name">><a href="./list05.html?fileId=' + val.id + '">';
                 html += val.title.substring(0, 35) + '...';
                 html += '</a></div>';
