@@ -13,7 +13,7 @@ $(function(){
             console.log(result)
             var html = '';
             $.each(result.rows, function(i, val){
-                html += '<a href="./key-work.html"><span class="sz">' + (i+1) + '</span><span class="bt">' + val.title + '</span></a>';
+                html += '<a href="./key-work.html?contentId='+ val.id +'&branch_id='+ branch_id +'&date='+ date +'"><span class="sz">' + (i+1) + '</span><span class="bt">' + val.title + '</span></a>';
             })
             $('#content').html(html);
         }
