@@ -14,5 +14,5 @@ function fanhui(){
 }
 
 function kaishi(){
-    window.location.href="./content.html?id=" + id + "&create_dt=" + date + "&dzjb_branch_id=" + branch_id;
+    window.location.href="./content.html?id=" + id + "&date=" + date + "&branch_id=" + branch_id + "&branch_name=" + branch_name;
 }
