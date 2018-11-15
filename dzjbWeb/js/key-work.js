@@ -39,8 +39,8 @@ $(function(){
                 var content = res.rows[i];
                 inhtml += '<div class="list"><div class="title01"><p></p></div>';
                 inhtml += '<ul>';
-                var pdf_path = content.pdf_path;
-                inhtml += '<li><a href="#" target="_blank">（' + (i+1) + '）' + content.file_name + '  【点击预览】</a>';
+                var pdf_path = ipPort + content.pdf_path;
+                inhtml += '<li><a href="'+ pdf_path +'" target="_blank">（' + (i+1) + '）' + content.file_name + '  【点击预览】</a>';
                 if(content.if_return == 0){
                     inhtml += '<button type="button" class="btn btn-default" title = "不再下次交班中显示" onclick = "ifReturn('+content.id+')">点击移除文件</button>';
                 }
