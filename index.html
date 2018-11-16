@@ -11,6 +11,14 @@
 <script src="js/hd-all-on-gd-01.js"></script>
 <script src="js/index.js"></script>
 <script src="js/util.js"></script>
+<script src="js/jiaodian.js"></script>
+<script src="js/jiaodian01.js"></script>
+<script src="js/jquery.reveal.js"></script>
+<script>
+  function showa(){
+     document.getElementById('example').click();
+  }
+  </script>
 </head>
 
 <body>
@@ -24,13 +32,49 @@
   <a href="#" class="hd-time-img"></a>
   <p><a href="#" id = "date">2018-08-08</a></p>
  </div>
+ <!-- <div class="hd-my-login">
+  <a href="#" class="hd-my-login-img" onclick="showa();document.getElementById('example').click();"></a>
+  <p><a href="#" id="example"  onclick="showb()">我要登录</a></p>
+ </div>
+ <div class="hd-exit-login">
+  <a href="#" class="hd-exit-login-img"></a>
+  <p><a href="#">退出登录</a></p>
+ </div>  -->
 </div>
+
+<!--弹出-->
+<div id="LoginBox">
+  <div class="row1">登录DIY账号窗口<a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">×</a></div>
+  <div class="row2">用户名: 
+   <span class="inputBox"><input type="text" id="txtName" placeholder="账号/邮箱" class="hd-login-input"/></span>
+   <a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+  </div>
+  <div class="row2">密&nbsp;&nbsp;&nbsp;&nbsp;码:
+   <span class="inputBox"><input type="text" id="txtPwd" placeholder="密码" class="hd-login-input"/></span>
+   <a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+  </div>
+  <div class="row2">
+   <a href="#" id="loginbtn">登录</a>
+  </div>
+ </div>
+
 <!--主干-->
 <div class="hd-all-in-one-body">
 <div style="float:left">
 <!--第一列-->
  <div class="hd-all-in-one-body-left01">
-  <div><img src="images/fczs.jpg" width="520" height="334" /></div>
+  <div class="banner" id="b04">
+    <ul>
+      <li class="slider-item"><a href="#"><img src="images/fczs.jpg"><span class="slider-title">致力于建设文明哈尔滨而努力奋斗勤奋有发动反击爱上了放假</span></a></li>
+      <li class="slider-item"><a href="#"><img src="images/02.jpg"><span class="slider-title">222</span></a></li>
+      <li class="slider-item"><a href="#"><img src="images/03.jpg"><span class="slider-title">333</span></a></li>
+      <li class="slider-item"><a href="#"><img src="images/04.jpg"><span class="slider-title">444</span></a></li>
+      <li class="slider-item"><a href="#"><img src="images/05.jpg"><span class="slider-title">555</span></a></li>
+    </ul>
+   <div class="progress"></div>
+   <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="images/arrowl.png" alt="prev" width="20" height="35"></a>
+   <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="images/arrowr.png" alt="next" width="20" height="37"></a>
+ </div>
 <!--工作督办-->  
   <div class="left01-work-division">
    <div><a href="./list02.html" class="hd-all-in-one-body-more">查看更多</a></div>

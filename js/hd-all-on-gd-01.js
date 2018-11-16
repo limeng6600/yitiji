@@ -6,7 +6,7 @@ $(document).ready(function(e) {
 	},5000);*/
 	/***不需要自动滚动，去掉即可***/
 	linum = $('.mainlist li').length;//图片数量
-	w = linum * 190;//ul宽度
+	w = linum * 185;//ul宽度
 	$('.piclist').css('width', w + 'px');//ul宽度
 	$('.swaplist').html($('.mainlist').html());//复制内容
 	
@@ -16,7 +16,7 @@ $(document).ready(function(e) {
 			$('.swaplist,.mainlist').stop(true,true);
 		}
 		
-		if($('.mainlist li').length>13){//多于4张图片
+		if($('.mainlist li').length>7){//多于4张图片
 			ml = parseInt($('.mainlist').css('left'));//默认图片ul位置
 			sl = parseInt($('.swaplist').css('left'));//交换图片ul位置
 			if(ml<=0 && ml>w*-1){//默认图片显示时
@@ -40,7 +40,7 @@ $(document).ready(function(e) {
 			$('.swaplist,.mainlist').stop(true,true);
 		}
 		
-		if($('.mainlist li').length>13){
+		if($('.mainlist li').length>7){
 			ml = parseInt($('.mainlist').css('left'));
 			sl = parseInt($('.swaplist').css('left'));
 			if(ml<=0 && ml>w*-1){
