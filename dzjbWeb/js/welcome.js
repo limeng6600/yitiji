@@ -1,5 +1,5 @@
 $(function(){
-    data = GetUrlParms();
+    var data = GetUrlParms();
     branch_name = decodeURI(escape(data.branch_name));
     date = data.date;
     id = data.id;
