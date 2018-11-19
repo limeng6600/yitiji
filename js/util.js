@@ -28,3 +28,7 @@ function GetUrlParms() {
     }
     return args;
 }
+
+function xtsz(){
+    window.location.href="./xtgl.html"
+}

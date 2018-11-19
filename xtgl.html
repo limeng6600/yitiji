@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一体机</title>
+<link href="css/hd-all-in-one.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/dropzone.css" rel="stylesheet" type="text/css"/> 
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/dropzone.js"></script>
+</head>
+
+<body>
+        <div class="hd-all-in-one-top">
+                <div class="hd-system-settings">
+                 <a href="#" class="hd-system-settings-img"></a>
+                 <p><a href="#">系统设置</a></p>
+                </div>
+                <div class="hd-time">
+                 <a href="#" class="hd-time-img"></a>
+                 <p><a href="#" id="date">2018-08-08</a></p>
+                </div>
+               </div>
+               <!--主干-->
+               <div class="hd-all-in-one-body">
+                <div class="hd-all-in-one-body-dh">
+                 <a href="./index.html" class="hd-dh-001">返回首页</a>
+                 <!-- <a href="#" class="hd-dh-002">返回首页</a>
+                 <a href="#" class="hd-dh-003">返回首页</a>
+                 <a href="#" class="hd-dh-004">返回首页</a>
+                 <a href="#" class="hd-dh-005">返回首页</a>
+                 <a href="#" class="hd-dh-006">返回首页</a>
+                 <a href="#" class="hd-dh-007">返回首页</a>
+                 <a href="#" class="hd-dh-008">返回首页</a>         -->
+                </div>
+                <div style="clear:both"></div> 
+                <div class="hd-all-in-one-body-ight-list">
+                 <div class="hd-all-in-one-body01-ight-list-title">一体机首页轮播图维护</div>
+                 
+                 <div><h1>轮播图片上传</h1></div>
+                 <div style="width: 50%;">
+                        <form action="./api/yitiji/uploadImg" class="dropzone" id="dropz">
+                            <div class="fallback">
+                              <input name="file" type="file" multiple  id="upload"/>
+                            </div>
+                          </form>
+                 </div>
+                 
+                </div>
+               </div>
+</body>
+</html>
