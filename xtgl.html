@@ -10,6 +10,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/util.js"></script>
 <script src="js/dropzone.js"></script>
+<script src="js/xtgl.js"></script>
 </head>
 
 <body>
@@ -38,17 +39,65 @@
                 <div style="clear:both"></div> 
                 <div class="hd-all-in-one-body-ight-list">
                  <div class="hd-all-in-one-body01-ight-list-title">一体机首页轮播图维护</div>
-                 
-                 <div><h1>轮播图片上传</h1></div>
-                 <div style="width: 50%;">
-                        <form action="./api/yitiji/uploadImg" class="dropzone" id="dropz">
-                            <div class="fallback">
-                              <input name="file" type="file" multiple  id="upload"/>
-                            </div>
-                          </form>
+       
+                <div style="width: 50%;margin:0 auto;">
+                       <div class="form-group">
+                        <div id="dropz" class="dropzone"></div>
+                        <input type="hidden" name="file_id" ng-model="file_id" id="file_id"/>
                  </div>
+                </div>
                  
+
+                 <div class="hd-all-in-one-body01-ight-list-table">
+                         <div id="rows">
+                             <div class="hd-table-list01" style="height:200px">
+                                 <div class="hd-table-name" style="width:35%"><a href="#">1.</a></div>
+                                 <div class="hd-table-time"><img src="images/fczs.jpg" style="height:180px"></div>
+                                 <div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger">删除</button></div>
+                             </div> 
+                         </div>  
+                   </div>
                 </div>
                </div>
+               <script>
+                  var dropz = new Dropzone("#dropz", {
+                      url: "/api/common/upload/carousel",//文件提交地址
+                      method:"post",  //也可用put
+                      paramName:"file", //默认为file
+                      maxFiles:10,//一次性上传的文件数量上限
+                      maxFilesize: 6, //文件大小，单位：MB
+                      acceptedFiles: ".jpg,.png,.jpeg", //上传的类型
+                      addRemoveLinks:true,
+                      parallelUploads: 10,//一次上传的文件数量
+                      //previewsContainer:"#preview",//上传图片的预览窗口
+                      dictDefaultMessage:'拖动文件至此或者点击上传',
+                      // dictMaxFilesExceeded: "您最多只能上传1个文件！",
+                      dictResponseError: '文件上传失败!',
+                      dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg。",
+                      dictFallbackMessage:"浏览器不受支持",
+                      dictFileTooBig:"文件过大上传文件最大支持.",
+                      dictRemoveLinks: "删除",
+                      dictCancelUpload: "取消",
+                      init:function(){
+                          this.on("success",function(file,data){
+                            $.ajax({
+                              url:'./api/yitiji/findImg',
+                              dataType:'json',
+                              tyep:'GET',
+                              success:function(result){
+                                  var html = '';
+                                  $.each(result.rows, function(i, val){
+                                      html += '<div class="hd-table-list01" style="height:200px">';
+                                      html += '<div class="hd-table-name" style="width:35%"><a href="#">'+ (i+1) +'.</a></div>';
+                                      html += '<div class="hd-table-time"><img src="'+ val.img +'" style="height:180px"></div>';
+                                      html += '<div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger" onclick="deleteImg('+ val.id +')">删除</button></div></div>';
+                                  })
+                                  $('#rows').html(html);
+                              }
+                          })
+                        });
+                      }
+                  });
+               </script>
 </body>
 </html>
