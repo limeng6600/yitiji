@@ -19,28 +19,26 @@ $(function(){
     })
 
     $.ajax({
-        url:'./api/yitiji/findImg',
+        url:'./api/dropbox/findPackageFile?packageId=27',
         tyep:'GET',
         dataType:'json',
         success:function(result){
-            console.log(result.rows.length)
+            console.log(result.rows)
             if(result.rows.length == 1){
-                $.each(result.rows, function(i, val){
-                    $("#fir").attr('src',val.img); 
-                })
+                $("#fir").attr('src',ipPort + result.rows[0].upload_path); 
             }
             if(result.rows.length == 2){
                 $.each(result.rows, function(i, val){
                     if(i == 0){
-                        $("#fir").attr('src',val.img); 
+                        $("#fir").attr('src',ipPort + val.upload_path); 
                     }else if(i == 1){
-                        $("#sec").attr('src',val.img); 
+                        $("#sec").attr('src',ipPort + val.upload_path); 
                     }else if(i == 2){
-                        $("#thi").attr('src',val.img); 
+                        $("#thi").attr('src',ipPort + val.upload_path); 
                     }else if(i == 3){
-                        $("#for").attr('src',val.img); 
+                        $("#for").attr('src',ipPort + val.upload_path); 
                     }else if(i ==4){
-                        $("#fiv").attr('src',val.img); 
+                        $("#fiv").attr('src',ipPort + val.upload_path); 
                     }
                 })
             }
@@ -48,45 +46,45 @@ $(function(){
                 $.each(result.rows, function(i, val){
                     console.log(i)
                     if(i == 0){
-                        $("#fir").attr('src',val.img); 
+                        $("#fir").attr('src',ipPort + val.upload_path); 
                     }else if(i == 1){
-                        $("#sec").attr('src',val.img); 
+                        $("#sec").attr('src',ipPort + val.upload_path); 
                     }else if(i == 2){
-                        $("#thi").attr('src',val.img); 
+                        $("#thi").attr('src',ipPort + val.upload_path); 
                     }else if(i == 3){
-                        $("#for").attr('src',val.img); 
+                        $("#for").attr('src',ipPort + val.upload_path); 
                     }else if(i ==4){
-                        $("#fiv").attr('src',val.img); 
+                        $("#fiv").attr('src',ipPort + val.upload_path); 
                     }
                 })
             }
             if(result.rows.length == 4){
                 $.each(result.rows, function(i, val){
                     if(i == 0){
-                        $("#fir").attr('src',val.img); 
+                        $("#fir").attr('src',ipPort + val.upload_path); 
                     }else if(i == 1){
-                        $("#sec").attr('src',val.img); 
+                        $("#sec").attr('src',ipPort + val.upload_path); 
                     }else if(i == 2){
-                        $("#thi").attr('src',val.img); 
+                        $("#thi").attr('src',ipPort + val.upload_path); 
                     }else if(i == 3){
-                        $("#for").attr('src',val.img); 
+                        $("#for").attr('src',ipPort + val.upload_path); 
                     }else if(i ==4){
-                        $("#fiv").attr('src',val.img); 
+                        $("#fiv").attr('src',ipPort + val.upload_path); 
                     }
                 })
             }
             if(result.rows.length >= 5){
                 $.each(result.rows, function(i, val){
                     if(i == 0){
-                        $("#fir").attr('src',val.img); 
+                        $("#fir").attr('src',ipPort + val.upload_path); 
                     }else if(i == 1){
-                        $("#sec").attr('src',val.img); 
+                        $("#sec").attr('src',ipPort + val.upload_path); 
                     }else if(i == 2){
-                        $("#thi").attr('src',val.img); 
+                        $("#thi").attr('src',ipPort + val.upload_path); 
                     }else if(i == 3){
-                        $("#for").attr('src',val.img); 
+                        $("#for").attr('src',ipPort + val.upload_path); 
                     }else if(i ==4){
-                        $("#fiv").attr('src',val.img); 
+                        $("#fiv").attr('src',ipPort + val.upload_path); 
                     }
                 })
             }
