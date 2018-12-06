@@ -5,6 +5,7 @@
 <title>一体机</title>
 <link href="css/hd-all-in-one.css" rel="stylesheet" type="text/css" />
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/ft-carousel.css" rel="stylesheet" type="text/css" />
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/hd-all-on-gd.js"></script>
@@ -158,8 +159,37 @@
 </div>
 </div> 
 <!--第三列--> 
- <div class="hd-all-in-one-body-left03">
-  <div><img src="images/alzs.jpg" width="515" height="329" /></div>
+<div class="hd-all-in-one-body-left03">
+  
+  <div class="hd-example">
+    <div class="hd-ft-carousel" id="carousel_1">
+      <ul class="hd-carousel-inner">
+        <li class="hd-carousel-item"><img src="images/a2.jpg"></li>
+        <li class="hd-carousel-item"><img src="images/a3.jpg"></li>
+        <li class="hd-carousel-item"><img src="images/a4.jpg"></li>
+        <li class="hd-carousel-item"><img src="images/a5.jpg"></li>
+        <li class="hd-carousel-item"><img src="images/a6.jpg"></li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="js/ft-carousel.min.js"></script>
+  <script type="text/javascript">
+    $("#carousel_1").FtCarousel();
+  
+    $("#carousel_2").FtCarousel({
+      index: 1,
+      auto: false
+    });
+  
+    $("#carousel_3").FtCarousel({
+      index: 0,
+      auto: true,
+      time: 3000,
+      indicators: false,
+      buttons: true
+    });
+  </script>
 <!--今天你提议了吗？-->  
   <div class="left03-proposed">
    <div><a href="./list07.html  " class="hd-all-in-one-body-more">查看更多</a></div>
