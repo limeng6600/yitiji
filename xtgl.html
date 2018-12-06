@@ -15,10 +15,10 @@
 
 <body>
         <div class="hd-all-in-one-top">
-                <!-- <div class="hd-system-settings">
+                <div class="hd-system-settings">
                  <a href="#" class="hd-system-settings-img"></a>
                  <p><a href="#">系统设置</a></p>
-                </div> -->
+                </div>
                 <div class="hd-time">
                  <a href="#" class="hd-time-img"></a>
                  <p><a href="#" id="date">2018-08-08</a></p>
@@ -38,17 +38,17 @@
                 </div>
                 <div style="clear:both"></div> 
                 <div class="hd-all-in-one-body-ight-list">
-                 <div class="hd-all-in-one-body01-ight-list-title">一体机首页轮播图维护</div>
+                 <div class="hd-all-in-one-body01-ight-list-title">今天你提议了么！</div>
        
-                <div style="width: 50%;margin:0 auto;">
+                <!-- <div style="width: 50%;margin:0 auto;">
                        <div class="form-group">
                         <div id="dropz" class="dropzone"></div>
                         <input type="hidden" name="file_id" ng-model="file_id" id="file_id"/>
                  </div>
-                </div>
+                </div> -->
                  
 
-                 <div class="hd-all-in-one-body01-ight-list-table">
+                    <!-- <div class="hd-all-in-one-body01-ight-list-table">
                          <div id="rows">
                              <div class="hd-table-list01" style="height:200px">
                                  <div class="hd-table-name" style="width:35%"><a href="#">1.</a></div>
@@ -56,7 +56,28 @@
                                  <div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger">删除</button></div>
                              </div> 
                          </div>  
-                   </div>
+                    </div> -->
+
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="firstname" class="col-sm-2 control-label" style="color:#fff"><h5>标题</h5></label>
+                          <div class="col-sm-5">
+                            <input type="text" class="form-control" id="firstname" placeholder="请输入标题">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastname" class="col-sm-2 control-label" style="color:#fff"><h5>正文</h5></label>
+                          <div class="col-sm-5">
+                            <textarea class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default"style="width:49%">登录</button>
+                          </div>
+                        </div>
+                      </form>
                 </div>
                </div>
                <script>
