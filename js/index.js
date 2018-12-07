@@ -23,7 +23,6 @@ $(function(){
         tyep:'GET',
         dataType:'json',
         success:function(result){
-            console.log(result.rows)
             if(result.rows.length == 1){
                 $("#fir").attr('src',ipPort + result.rows[0].upload_path); 
             }
@@ -89,6 +88,27 @@ $(function(){
                 })
             }
          }
+    })
+
+
+    $.ajax({
+        url:'./api/proposal/findProposal',
+        type:'GET',
+        dataType:'json',
+        success:function(result){
+            console.log(result)
+            var html = '';
+            $.each(result.rows, function(i, val){
+                if(i>15)
+                    return false;
+                html += '<li><a href="./details.html?id='+ val.id +'" class="hd-all-in-one-body-list-text">';
+                html += val.title.substring(0, 20);
+                html += '</a><span class="hd-all-in-one-body-list-time">';
+                html += val.create_dt;
+                html += '</span></li>';
+            })
+            $('#proposal').html(html);
+        }
     })
 })
 

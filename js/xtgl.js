@@ -1,28 +1,15 @@
-$(function(){
-    
-    $.ajax({
-        url:'./api/yitiji/findImg',
-        dataType:'json',
-        tyep:'GET',
-        success:function(result){
-            var html = '';
-            $.each(result.rows, function(i, val){
-                html += '<div class="hd-table-list01" style="height:200px">';
-                html += '<div class="hd-table-name" style="width:35%"><a href="#">'+ (i+1) +'.</a></div>';
-                html += '<div class="hd-table-time"><img src="'+ val.img +'" style="height:180px"></div>';
-                html += '<div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger" onclick="deleteImg('+ val.id +')">删除</button></div></div>';
-            })
-            $('#rows').html(html);
-        }
-    })
-})
 
-function deleteImg(id){
+function tijiao(){
+    var title = $('#title').val();
+    var text = $('#text').val();
     $.ajax({
-        url:'./api/yitiji/deleteImg?id=' + id,
+        url:"./api/proposal/insert",
         dataType:'json',
-        tyep:'GET',
+        type:'POST',
+        contentType:'application/json',
+        data:JSON.stringify({'title':title, 'text':text}),
         success:function(result){
+            alert(result.message)
             window.location.reload();
         }
     })

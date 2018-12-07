@@ -59,66 +59,66 @@
                     </div> -->
 
 
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" id="form">
                         <div class="form-group">
                           <label for="firstname" class="col-sm-2 control-label" style="color:#fff"><h5>标题</h5></label>
                           <div class="col-sm-5">
-                            <input type="text" class="form-control" id="firstname" placeholder="请输入标题">
+                            <input type="text" id="title" class="form-control" name="title" placeholder="请输入标题">
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="lastname" class="col-sm-2 control-label" style="color:#fff"><h5>正文</h5></label>
+                          <label for="lastname" class="col-sm-2 control-label" style="color:#fff" ><h5>正文</h5></label>
                           <div class="col-sm-5">
-                            <textarea class="form-control" rows="5"></textarea>
+                            <textarea class="form-control" rows="5" name="text" id="text"></textarea>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default"style="width:49%">登录</button>
+                            <button type="button" class="btn btn-default"style="width:49%" onclick="tijiao()">提交</button>
                           </div>
                         </div>
                       </form>
                 </div>
                </div>
                <script>
-                  var dropz = new Dropzone("#dropz", {
-                      url: "/api/common/upload/carousel",//文件提交地址
-                      method:"post",  //也可用put
-                      paramName:"file", //默认为file
-                      maxFiles:10,//一次性上传的文件数量上限
-                      maxFilesize: 6, //文件大小，单位：MB
-                      acceptedFiles: ".jpg,.png,.jpeg", //上传的类型
-                      addRemoveLinks:true,
-                      parallelUploads: 10,//一次上传的文件数量
-                      //previewsContainer:"#preview",//上传图片的预览窗口
-                      dictDefaultMessage:'拖动文件至此或者点击上传',
-                      // dictMaxFilesExceeded: "您最多只能上传1个文件！",
-                      dictResponseError: '文件上传失败!',
-                      dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg。",
-                      dictFallbackMessage:"浏览器不受支持",
-                      dictFileTooBig:"文件过大上传文件最大支持.",
-                      dictRemoveLinks: "删除",
-                      dictCancelUpload: "取消",
-                      init:function(){
-                          this.on("success",function(file,data){
-                            $.ajax({
-                              url:'./api/yitiji/findImg',
-                              dataType:'json',
-                              tyep:'GET',
-                              success:function(result){
-                                  var html = '';
-                                  $.each(result.rows, function(i, val){
-                                      html += '<div class="hd-table-list01" style="height:200px">';
-                                      html += '<div class="hd-table-name" style="width:35%"><a href="#">'+ (i+1) +'.</a></div>';
-                                      html += '<div class="hd-table-time"><img src="'+ val.img +'" style="height:180px"></div>';
-                                      html += '<div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger" onclick="deleteImg('+ val.id +')">删除</button></div></div>';
-                                  })
-                                  $('#rows').html(html);
-                              }
-                          })
-                        });
-                      }
-                  });
+                  // var dropz = new Dropzone("#dropz", {
+                  //     url: "/api/common/upload/carousel",//文件提交地址
+                  //     method:"post",  //也可用put
+                  //     paramName:"file", //默认为file
+                  //     maxFiles:10,//一次性上传的文件数量上限
+                  //     maxFilesize: 6, //文件大小，单位：MB
+                  //     acceptedFiles: ".jpg,.png,.jpeg", //上传的类型
+                  //     addRemoveLinks:true,
+                  //     parallelUploads: 10,//一次上传的文件数量
+                  //     //previewsContainer:"#preview",//上传图片的预览窗口
+                  //     dictDefaultMessage:'拖动文件至此或者点击上传',
+                  //     // dictMaxFilesExceeded: "您最多只能上传1个文件！",
+                  //     dictResponseError: '文件上传失败!',
+                  //     dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg。",
+                  //     dictFallbackMessage:"浏览器不受支持",
+                  //     dictFileTooBig:"文件过大上传文件最大支持.",
+                  //     dictRemoveLinks: "删除",
+                  //     dictCancelUpload: "取消",
+                  //     init:function(){
+                  //         this.on("success",function(file,data){
+                  //           $.ajax({
+                  //             url:'./api/yitiji/findImg',
+                  //             dataType:'json',
+                  //             tyep:'GET',
+                  //             success:function(result){
+                  //                 var html = '';
+                  //                 $.each(result.rows, function(i, val){
+                  //                     html += '<div class="hd-table-list01" style="height:200px">';
+                  //                     html += '<div class="hd-table-name" style="width:35%"><a href="#">'+ (i+1) +'.</a></div>';
+                  //                     html += '<div class="hd-table-time"><img src="'+ val.img +'" style="height:180px"></div>';
+                  //                     html += '<div class="hd-table-type" style="width:50%"><button type="button" class="btn btn-danger" onclick="deleteImg('+ val.id +')">删除</button></div></div>';
+                  //                 })
+                  //                 $('#rows').html(html);
+                  //             }
+                  //         })
+                  //       });
+                  //     }
+                  // });
                </script>
 </body>
 </html>
