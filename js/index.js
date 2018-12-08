@@ -43,7 +43,6 @@ $(function(){
             }
             if(result.rows.length == 3){
                 $.each(result.rows, function(i, val){
-                    console.log(i)
                     if(i == 0){
                         $("#fir").attr('src',ipPort + val.upload_path); 
                     }else if(i == 1){
@@ -92,11 +91,83 @@ $(function(){
 
 
     $.ajax({
-        url:'./api/proposal/findProposal',
+        url:'./api/dropbox/findPackageFile?packageId=28',
         type:'GET',
         dataType:'json',
         success:function(result){
             console.log(result)
+            if(result.rows.length == 1){
+                $("#fir1").attr('src',ipPort + result.rows[0].upload_path); 
+            }
+            if(result.rows.length == 2){
+                $.each(result.rows, function(i, val){
+                    if(i == 0){
+                        $("#fir1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 1){
+                        $("#sec1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 2){
+                        $("#thi1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 3){
+                        $("#for1").attr('src',ipPort + val.upload_path); 
+                    }else if(i ==4){
+                        $("#fiv1").attr('src',ipPort + val.upload_path); 
+                    }
+                })
+            }
+            if(result.rows.length == 3){
+                $.each(result.rows, function(i, val){
+                    console.log(i)
+                    if(i == 0){
+                        $("#fir1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 1){
+                        $("#sec1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 2){
+                        $("#thi1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 3){
+                        $("#for1").attr('src',ipPort + val.upload_path); 
+                    }else if(i ==4){
+                        $("#fiv1").attr('src',ipPort + val.upload_path); 
+                    }
+                })
+            }
+            if(result.rows.length == 4){
+                $.each(result.rows, function(i, val){
+                    if(i == 0){
+                        $("#fir1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 1){
+                        $("#sec1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 2){
+                        $("#thi1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 3){
+                        $("#for1").attr('src',ipPort + val.upload_path); 
+                    }else if(i ==4){
+                        $("#fiv1").attr('src',ipPort + val.upload_path); 
+                    }
+                })
+            }
+            if(result.rows.length >= 5){
+                $.each(result.rows, function(i, val){
+                    if(i == 0){
+                        $("#fir1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 1){
+                        $("#sec1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 2){
+                        $("#thi1").attr('src',ipPort + val.upload_path); 
+                    }else if(i == 3){
+                        $("#for1").attr('src',ipPort + val.upload_path); 
+                    }else if(i ==4){
+                        $("#fiv1").attr('src',ipPort + val.upload_path); 
+                    }
+                })
+            }
+        }
+    })
+
+    $.ajax({
+        url:'./api/proposal/findProposal',
+        type:'GET',
+        dataType:'json',
+        success:function(result){
             var html = '';
             $.each(result.rows, function(i, val){
                 if(i>15)
