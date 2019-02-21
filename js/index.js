@@ -156,6 +156,7 @@ $(function(){
                     }else if(i == 3){
                         $("#for1").attr('src',ipPort + val.upload_path); 
                     }else if(i ==4){
+                        console.log(ipPort + val.upload_path)
                         $("#fiv1").attr('src',ipPort + val.upload_path); 
                     }
                 })

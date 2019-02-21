@@ -1,5 +1,5 @@
 ipPort = "http://localhost:8047"; 
-// ipPort = "http://10.19.147.28:8047"; 
+//ipPort = "http://10.19.147.28:8047"; 
 
 date = '';
 $(function(){

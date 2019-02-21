@@ -3,7 +3,7 @@ $(function(){
     var topic_name = decodeURI(escape(data.topic_name));
     $('#topic_name').text(topic_name + '文件列表');
     $.ajax({
-        url:'./api/topic/getRoleTopic?role_id=2',
+        url:'./api/topic/getRoleTopic?role_id=-1',
         dataType:'json',
         type:'GET',
         success:function(result){
